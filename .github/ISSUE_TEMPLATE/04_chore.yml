@@ -1,0 +1,17 @@
+name: Chore
+description: Maintenance, refactoring, or documentation
+title: "[Chore]: "
+labels: ["chore", "triage"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Describe the maintenance task.
+    validations:
+      required: true
+  - type: textarea
+    id: benefits
+    attributes:
+      label: Benefits
+      description: Why is this chore necessary? (e.g., reduces tech debt, improves security)
