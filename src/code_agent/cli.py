@@ -10,7 +10,7 @@ console = Console()
 def run(
     task: str = typer.Argument(..., help="The task for the agent to perform"),
     headless: bool = typer.Option(False, "--headless", help="Run without interactive confirmation"),
-):
+) -> None:
     """
     Execute a single autonomous task.
     """
@@ -24,7 +24,7 @@ def run(
     # TODO: Initialize AgentEngine and run loop
 
 @app.command()
-def interactive():
+def interactive() -> None:
     """
     Start an interactive design or requirement gathering session.
     """
@@ -36,7 +36,7 @@ def interactive():
 def server(
     port: int = typer.Option(8000, help="Port to run the Web API on"),
     host: str = typer.Option("0.0.0.0", help="Host to bind the Web API to")
-):
+) -> None:
     """
     Start the Agent Web API server.
     """
@@ -48,7 +48,7 @@ def server(
 @app.callback()
 def main(
     verbose: bool = typer.Option(False, "--verbose", "-v", help="Enable verbose output"),
-):
+) -> None:
     """
     Code Agent CLI - Your Autonomous Engineering Assistant.
     """
