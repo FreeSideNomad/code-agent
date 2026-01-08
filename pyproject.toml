@@ -17,7 +17,18 @@ dependencies = [
     "pygithub>=2.0.0",
     "python-dotenv>=1.0.0",
     "rich>=13.0.0",
-    "alembic>=1.13.0"
+    "alembic>=1.13.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "ruff>=0.1.0",
+    "mypy>=1.0.0",
+    "pre-commit>=3.0.0",
+    "types-pyyaml",
+    "types-requests"
 ]
 
 [project.scripts]
@@ -30,3 +41,27 @@ build-backend = "hatchling.build"
 [tool.pytest.ini_options]
 pythonpath = "src"
 testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B"]
+ignore = []
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+ignore_missing_imports = true
+
+[dependency-groups]
+dev = [
+    "mypy>=1.19.1",
+    "pre-commit>=4.5.1",
+    "pytest>=9.0.2",
+    "pytest-cov>=7.0.0",
+    "ruff>=0.14.11",
+    "types-pyyaml>=6.0.12.20250915",
+    "types-requests>=2.32.4.20260107",
+]
