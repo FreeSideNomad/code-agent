@@ -1,0 +1,42 @@
+name: User Story
+description: Agile user story for new functionality
+title: "[User Story]: "
+labels: ["user-story", "triage"]
+body:
+  - type: textarea
+    id: story
+    attributes:
+      label: User Story
+      description: "Format: As a [role], I want [feature], so that [benefit]."
+      placeholder: "As a developer, I want to use the CLI to initialize a project, so that I don't have to write boilerplate code."
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: List specific conditions that must be met.
+      placeholder: |
+        - [ ] The CLI accepts the `init` command.
+        - [ ] A `pyproject.toml` is created.
+        - [ ] The user receives a success message.
+    validations:
+      required: true
+  - type: textarea
+    id: tasks
+    attributes:
+      label: Technical Tasks (Optional)
+      description: Breakdown of engineering tasks if known.
+      placeholder: |
+        - Create `init` command in Typer.
+        - Add template generation logic.
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - High
+        - Medium
+        - Low
+    validations:
+      required: true
