@@ -1,4 +1,5 @@
 from typing import Any
+
 from fastapi import FastAPI
 
 app = FastAPI(title="Code Agent API", version="0.1.0")
