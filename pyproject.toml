@@ -17,7 +17,7 @@ dependencies = [
     "pygithub>=2.0.0",
     "python-dotenv>=1.0.0",
     "rich>=13.0.0",
-    "alembic>=1.13.0"
+    "alembic>=1.13.0",
 ]
 
 [project.optional-dependencies]
@@ -54,3 +54,14 @@ ignore = []
 python_version = "3.12"
 strict = true
 ignore_missing_imports = true
+
+[dependency-groups]
+dev = [
+    "mypy>=1.19.1",
+    "pre-commit>=4.5.1",
+    "pytest>=9.0.2",
+    "pytest-cov>=7.0.0",
+    "ruff>=0.14.11",
+    "types-pyyaml>=6.0.12.20250915",
+    "types-requests>=2.32.4.20260107",
+]
