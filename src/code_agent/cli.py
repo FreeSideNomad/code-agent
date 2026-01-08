@@ -1,6 +1,5 @@
+
 import typer
-import asyncio
-from typing import Optional
 from rich.console import Console
 from rich.panel import Panel
 
